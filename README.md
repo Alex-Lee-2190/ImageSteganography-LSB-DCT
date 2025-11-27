@@ -76,7 +76,7 @@ python main.py
 | **LSB** | (宽 x 高 x 3) / 16 字节 | **~380 KB** | 存储机密文件、长文本、源代码。容量随分辨率线性增加。 |
 | **FFT** | 固定载荷 (受限于 36x36 图块) | **~100 - 120 字节** | 版权声明、短链接、ID 标识。分辨率增加只提高鲁棒性，不增加容量。图块的大小基于对容量和鲁棒性的取舍。 |
 
-## 鲁棒性测试报告
+## 鲁棒性测试
 
 *   测试文本: "Google LLC is an American technology corporation."
 *   基于每项攻击 50 次测试的结果。
@@ -85,18 +85,18 @@ python main.py
 
 | 攻击类型/分辨率 | 示例图片 | 1920x1080 | 1500x750 | 1000x500 | 320x320 |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **涂鸦攻击** | ![graffiti](IMAGE_URL) | 100.0% | 100.0% | 100.0% | 0.0% |
-| **裁剪 (保留40%面积)** | ![crop40](IMAGE_URL) | 100.0% | 100.0% | 0.0% | 0.0% |
-| **旋转 (90°)** | ![rot90](IMAGE_URL) | 100.0% | 100.0% | 100.0% | 100.0% |
-| **旋转 (180°)** | ![rot180](IMAGE_URL) | 100.0% | 98.0% | 98.0% | 100.0% |
-| **遮挡 (20个块)** | ![block20](IMAGE_URL) | 100.0% | 100.0% | 100.0% | 0.0% |
-| **JPEG压缩 (质量50)** | ![jpeg50](IMAGE_URL) | 100.0% | 100.0% | 100.0% | 100.0% |
-| **椒盐噪声** | ![saltpepper](IMAGE_URL) | 100.0% | 100.0% | 88.0% | 0.0% |
-| **高斯噪声** | ![gaussian](IMAGE_URL) | 100.0% | 100.0% | 100.0% | 98.0% |
-| **模糊 (半径1.5)** | ![blur15](IMAGE_URL) | 100.0% | 100.0% | 90.0% | 54.0% |
-| **亮度 (+50%)** | ![bright50](IMAGE_URL) | 82.0% | 80.0% | 76.0% | 64.0% |
-| **对比度 (+50%)** | ![contrast50](IMAGE_URL) | 100.0% | 100.0% | 98.0% | 98.0% |
-| **缩放 (50%)** | ![scale50](IMAGE_URL) | 100.0% | 100.0% | 100.0% | 80.0% |
+| **涂鸦攻击** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Scribble.png" width="220px"/> | 100.0% | 100.0% | 100.0% | 0.0% |
+| **裁剪 (保留40%面积)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Crop.png" width="220px"/> | 100.0% | 100.0% | 0.0% | 0.0% |
+| **旋转 (90°)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Rotate90.png" width="220px"/> | 100.0% | 100.0% | 100.0% | 100.0% |
+| **旋转 (180°)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Rotate180.png" width="220px"/> | 100.0% | 98.0% | 98.0% | 100.0% |
+| **遮挡 (20个块)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Occlusion.png" width="220px"/> | 100.0% | 100.0% | 100.0% | 0.0% |
+| **JPEG压缩 (质量50)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_JPEG.jpg" width="220px"/> | 100.0% | 100.0% | 100.0% | 100.0% |
+| **椒盐噪声** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Pepper.png" width="220px"/> | 100.0% | 100.0% | 88.0% | 0.0% |
+| **高斯噪声** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Noise.png" width="220px"/> | 100.0% | 100.0% | 100.0% | 98.0% |
+| **模糊 (半径1.5)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Blur.png" width="220px"/> | 100.0% | 100.0% | 90.0% | 54.0% |
+| **亮度 (+50%)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Brightness.png" width="220px"/> | 82.0% | 80.0% | 76.0% | 64.0% |
+| **对比度 (+50%)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Contrast.png" width="220px"/> | 100.0% | 100.0% | 98.0% | 98.0% |
+| **缩放 (50%)** | <img src="https://github.com/Alex-Lee-2190/ImageSteganography-LSB-DCT/raw/main/images/Stego_Scaling.png" width="220px"/> | 100.0% | 100.0% | 100.0% | 80.0% |
 | **综合得分** | — | **98.5%** | **98.2%** | **87.5%** | **57.8%** |
 
 ## License
